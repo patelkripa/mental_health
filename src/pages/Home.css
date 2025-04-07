@@ -1,0 +1,268 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@600&display=swap');
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFAF7;
+    color: #333;
+}
+
+/* Header Section */
+.home-header {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-top: 100px;
+}
+
+/* Dark Overlay for Better Readability */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Header Content */
+.header-content {
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* Header Titles */
+.header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    font-style: italic;
+    color: #ffffff;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: #fffffd;
+    margin-top: 10px;
+}
+
+/* Main Section */
+.main-section {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.main-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #1d0e0e;
+    margin-bottom: 40px;
+}
+
+/* Cards Section */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    width: 220px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #2F4F4F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Styling for Mental Well-being */
+.card.mental-wellbeing {
+    background: linear-gradient(145deg, #e8f4f4, #c7e1e1);
+    color: #d4712f;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.card.mental-wellbeing:hover {
+    background: linear-gradient(145deg, #c7e1e1, #e8f4f4);
+    color: #003333;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 36px;
+    }
+
+    .main-subtitle {
+        font-size: 18px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .main-section {
+        padding: 40px 5%;
+    }
+}
+/* View All Resources Link */
+.view-resources {
+  display: inline-block;
+  color: #005F5F;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.view-resources:hover {
+  text-decoration: underline;
+  color: #004545;
+}
+
+/* Treatment for Anxiety Section */
+.anxiety-section {
+  margin-top: 50px;
+  padding: 25px;
+  background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+  border-radius: 12px;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  display: block;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Fade-in Effect */
+.anxiety-section.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Headings and Paragraphs */
+.anxiety-section h2 {
+  color: #2F4F4F;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.anxiety-section p {
+  color: #444;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Read More Link */
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+  color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 36px;
+  }
+
+  .main-subtitle {
+    font-size: 18px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .main-section {
+    padding: 40px 5%;
+  }
+
+  .anxiety-section {
+    padding: 20px;
+  }
+
+  .anxiety-section h2 {
+    font-size: 22px;
+  }
+
+  .anxiety-section p {
+    font-size: 16px;
+  }
+}

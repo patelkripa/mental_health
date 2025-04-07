@@ -1,0 +1,132 @@
+                                                                                                                                      /* General Page Layout with Background Image */
+.connect-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background: url('C:\Users\hetal\OneDrive\Desktop\mental\mental-health-frontend\src\assets\img1.jpg') center/cover no-repeat;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  padding: 0 10%; /* Adding padding to keep content centered */
+}
+
+/* Overlay for Better Readability */
+.connect-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Lighter overlay */
+  z-index: -1;
+}
+
+/* Left Side Content */
+.left-content {
+  color: white;
+  max-width: 40%;
+  font-size: 20px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Form Section - Positioned to the Right */
+.connect-form {
+  background: rgba(255, 255, 255, 0.7); /* Increased transparency */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px); /* Adds a subtle blur effect */
+}
+
+/* Input Fields */
+.input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #00796b;
+}
+
+.connect-input {
+  width: 100%;
+  padding: 14px 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.connect-input:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 5px rgba(0, 121, 107, 0.3);
+}
+
+/* Button Styles */
+.connect-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: #00796b;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connect-button:hover {
+  background: #004d40;
+  transform: scale(1.05);
+}
+
+/* Messages */
+.success-message {
+  color: green;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+/* Meeting Link */
+a {
+  color: #00796b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

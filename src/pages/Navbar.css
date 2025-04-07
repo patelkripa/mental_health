@@ -1,0 +1,150 @@
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #005A4E;
+  color: white;
+  font-family: 'Georgia', serif;
+  z-index: 1000;
+  border-bottom: 1px solid #E6E4E1;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Ensure content doesn't hide behind navbar */
+body {
+  margin-top: 80px;
+}
+
+/* Logo & Nav Items Container */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* Navigation Links */
+.navbar-links ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: #F4A900;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background: #E6E4E1;
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 500px;
+}
+
+/* Buttons */
+.navbar-buttons {
+  display: flex;  /* Make buttons align in a row */
+  gap: 20px;  /* Space between buttons */
+  margin-left: auto; /* Pushes buttons to the right */
+}
+
+.navbar-button {
+  background-color: #F4A900; /* Gold color */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 16px;
+  margin-right: 1500px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar-button:hover {
+  background-color: #D28C00; /* Darker gold on hover */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .navbar-links ul {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar-left {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

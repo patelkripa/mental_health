@@ -1,0 +1,86 @@
+/* General styles for the page */
+html, body, #root, .app-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  display:contents;
+ background-color:#f6f6dd ;
+}
+
+
+/* App container to manage overall layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Navbar styling */
+.navbar-container {
+ 
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-container a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-container a:hover {
+  color: #ffeb3b; /* Yellow hover effect */
+}
+
+/* Main content area that flexes and grows */
+.main-content {
+  flex-grow: 1;  /* Takes remaining space */
+  padding: 20px;
+}
+
+
+/* Footer styles */
+.footer-container {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #444;
+  margin-top: auto;  /* Pushes footer to bottom */
+  width: 100%;
+}
+
+
+/* Links in footer */
+.footer-container a {
+  color: #f9c74f; /* Gold for links */
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-container a:hover {
+  color: #fff; /* White hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .footer-container {
+    padding: 15px;
+  }
+}

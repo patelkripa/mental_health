@@ -1,0 +1,119 @@
+                                                                                                                       /* Overall container styling with background image */
+.emergency-container {
+  font-family: "Arial", sans-serif;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px;
+  background: url('C:\Users\hetal\OneDrive\Desktop\mental\mental-health-frontend\src\pages\img2.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Move emergency description to the left */
+.emergency-header {
+  text-align: left; /* Align text to the left */
+  width: 40%; /* Adjust width as needed */
+  margin-left: -50%; /* Move it towards the left */
+}
+
+.emergency-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;  /* Added white font color */
+}
+
+.emergency-description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: white;  /* Added white font color */
+}
+
+/* Therapist list layout - Move to right and slightly down */
+.therapist-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align boxes to the right */
+  gap: 20px;
+  position: absolute;
+  right: 5%; /* Shift towards the right */
+  top: 60%; /* Move down slightly */
+  transform: translateY(-50%);
+}
+
+
+/* First two therapist cards in a row */
+.therapist-top {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end; /* Align to the right */
+}
+
+/* Third therapist card below, aligned to the right */
+.therapist-bottom {
+  display: flex;
+  justify-content: flex-end; /* Keep aligned to the right */
+  margin-right: 150px; /* Move it slightly to the right */
+}
+
+
+/* Therapist card styling */
+.therapist-card {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent effect */
+  backdrop-filter: blur(10px); /* Blur effect for better readability */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  color: white; /* Makes text readable */
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.therapist-card:hover {
+  transform: scale(1.05);
+}
+
+/* Call button */
+.call-button {
+  text-decoration: none;
+  background-color: #005A4E;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.call-button:hover {
+  background-color: #303f9f;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .emergency-container {
+    padding: 20px;
+  }
+
+  .therapist-layout {
+    align-items: center;
+  }
+
+  .therapist-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .therapist-bottom {
+    justify-content: center;
+  }
+
+  .therapist-card {
+    width: 90%;
+  }
+}

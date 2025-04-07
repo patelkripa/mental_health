@@ -1,0 +1,179 @@
+/* Mood Tracker Page Layout */
+.mood-tracker-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('C:\Users\hetal\OneDrive\Desktop\mental\mental-health-frontend\src\assets\img10.1.jpg') center/cover no-repeat; /* Add your image */
+  position: relative;
+  padding: 20px;
+}
+
+/* Blurred Background Effect */
+.mood-tracker-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(8px); /* Apply blur effect */
+  z-index: -1;
+}
+
+/* Mood Tracker Box (Right Side) */
+.mood-tracker-container {
+  flex: 1;
+  max-width: 500px;
+  padding: 50px;
+  padding-left: 70px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent effect */
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+}
+
+
+/* Left Section - Text */
+.mood-tracker-text {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+  padding-right: 150px;
+}
+
+.mood-tracker-text h1 {
+  font-size: 42px;
+  color: #312319;
+  font-weight: bold;
+}
+
+.mood-tracker-text p {
+  font-size: 18px;
+  color: #3f3124;
+  margin-top: 10px;
+}
+
+/* Title */
+.mood-tracker-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #3d2b1f;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Decorative Lines */
+.mood-tracker-title::before,
+.mood-tracker-title::after {
+  content: "——";
+  font-size: 24px;
+  margin: 0 10px;
+  color: #b09a7d;
+}
+
+/* Form Styling */
+.mood-tracker-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: #5b4534;
+}
+
+/* Input Fields & Select Dropdown */
+select,
+input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #c4a484;
+  border-radius: 5px;
+  background-color: #f5f1e3;
+  font-family: 'Georgia', serif;
+  transition: all 0.3s;
+}
+
+/* Input Focus Effects */
+select:focus,
+input:focus {
+  outline: none;
+  border-color: #8c6a4f;
+  box-shadow: 0 0 4px rgba(140, 106, 79, 0.5);
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  background-color: #896640;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Hover & Disabled States */
+.submit-button:hover {
+  background-color: #6e4e2e;
+}
+
+.submit-button:disabled {
+  background-color: #d2b89c;
+  cursor: not-allowed;
+}
+
+/* Recommendation Box */
+.recommendation-container {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f5f1e3;
+  border-left: 4px solid #c4a484;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-container h2 {
+  margin-top: 0;
+  color: #5b4534;
+}
+
+.recommendation-container p {
+  margin: 0;
+  color: #3d2b1f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mood-tracker-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mood-tracker-text {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .mood-tracker-container {
+    max-width: 90%;
+  }
+}

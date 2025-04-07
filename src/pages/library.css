@@ -1,0 +1,77 @@
+.library-container {
+  max-width: 1700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  margin-top: 90px;
+  width: 100%;
+}
+
+.library-content {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.reference-section {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sub-heading {
+  font-size: 22px;
+  color: #34495e;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #256038;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.reference-list {
+  list-style: none;
+  padding: 0;
+}
+
+.reference-item {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reference-item strong {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.reference-item p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 5px 0;
+}
+
+.reference-item a {
+  text-decoration: none;
+  color:#256038;
+  font-weight: bold;
+}
+
+.reference-item a:hover {
+  color:#256038;
+}
