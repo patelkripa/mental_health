@@ -131,13 +131,14 @@ const Connect = () => {
         {error && <p className="error-message">{error}</p>}
         {therapist && <p>Assigned Therapist: {therapist}</p>}
         {meetingLink && (
-          <p>
-            Your meeting link:{" "}
-            <a href={meetingLink} target="_blank" rel="noopener noreferrer">
-              Join Here
-            </a>
-          </p>
-        )}
+  <p>
+    Your meeting link:{"https://meet.google.com/ugx-pfyx-omx "}
+    <a href={meetingLink} target="_blank" rel="noopener noreferrer">
+      Join Here
+    </a>
+  </p>
+)}
+
       </div>
     </div>
   );

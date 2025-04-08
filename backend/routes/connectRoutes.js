@@ -22,10 +22,12 @@ const generateMeetingLink = (platform) => {
   if (platform === "Zoom") {
     return `https://zoom.us/j/${uuidv4().replace(/-/g, "").slice(0, 10)}`;
   } else if (platform === "Google Meet") {
-    return `https://meet.google.com/${uuidv4().slice(0, 3)}-${uuidv4().slice(3, 6)}-${uuidv4().slice(6, 9)}`;
+    // return real fixed link for demo
+    return `https://meet.google.com/ugx-pfyx-omx`;
   }
   return null;
 };
+
 
 // Assign therapist
 const getLeastRecentlyUsedTherapist = async (concern) => {
